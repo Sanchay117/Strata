@@ -1,0 +1,74 @@
+{
+  "fixtureCutoff": "2026-10-19",
+  "symbols": [
+    {
+      "symbol": "AAPL",
+      "bars": 420,
+      "lastVisibleDate": "2026-10-19",
+      "completedReferenceDate": "2026-10-16",
+      "state": "RECENT ABOVE BASE",
+      "migration": 0.08158915814988221,
+      "overlap": 0,
+      "closeRank": 0.9958333333333333
+    },
+    {
+      "symbol": "CVX",
+      "bars": 420,
+      "lastVisibleDate": "2026-10-19",
+      "completedReferenceDate": "2026-10-16",
+      "state": "MEMORIES OVERLAP",
+      "migration": 0.07453837103279426,
+      "overlap": 0.021048740663461737,
+      "closeRank": 0.9958333333333333
+    },
+    {
+      "symbol": "NVDA",
+      "bars": 420,
+      "lastVisibleDate": "2026-10-19",
+      "completedReferenceDate": "2026-10-16",
+      "state": "RECENT ABOVE BASE",
+      "migration": 0.06386943874218143,
+      "overlap": 0,
+      "closeRank": 0.4791666666666667
+    },
+    {
+      "symbol": "NKE",
+      "bars": 420,
+      "lastVisibleDate": "2026-10-19",
+      "completedReferenceDate": "2026-10-16",
+      "state": "RECENT BELOW BASE",
+      "migration": -0.1579385906387184,
+      "overlap": 0,
+      "closeRank": 0.2125
+    },
+    {
+      "symbol": "CRM",
+      "bars": 420,
+      "lastVisibleDate": "2026-10-19",
+      "completedReferenceDate": "2026-10-16",
+      "state": "MEMORIES OVERLAP",
+      "migration": 0.25416097578710595,
+      "overlap": 0.00672826328802853,
+      "closeRank": 0.8625
+    },
+    {
+      "symbol": "CSCO",
+      "bars": 420,
+      "lastVisibleDate": "2026-10-19",
+      "completedReferenceDate": "2026-10-16",
+      "state": "MEMORIES OVERLAP",
+      "migration": -0.022352807910034245,
+      "overlap": 0.4516746905268531,
+      "closeRank": 0.15416666666666667
+    }
+  ],
+  "checks": [
+    "fixture SHA-256",
+    "ordered finite contours",
+    "histogram mass conservation",
+    "identical axes for all profiles",
+    "native responsive chart sizing"
+  ],
+  "synthetic7000BarCalculationMs": 62.25,
+  "note": "Functional and rendering QA only; runtime is environment-dependent. Not a trading backtest."
+}

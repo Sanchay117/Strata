@@ -1,0 +1,11 @@
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const root = new URL('../', import.meta.url);
+const files = ['src/engine.js', 'src/presentation.js', 'src/trendspider.js'];
+const sections = await Promise.all(files.map(file => readFile(new URL(file, root), 'utf8')));
+const code = '/* Strata - Price Memory Atlas | MIT License | #TSBuild26\n * Visual category. Historical closing-price context; no trading-return claim.\n */\n' + sections.map((source, index) => '\n// ' + files[index] + '\n' + source.replace(/^export /gm, '')).join('\n');
+await mkdir(new URL('dist/', root), { recursive: true });
+await writeFile(new URL('dist/strata.trendspider.js', root), code);
+const sha256 = createHash('sha256').update(code).digest('hex');
+await writeFile(new URL('dist/build.json', root), JSON.stringify({ version: '0.1.0', sha256, bytes: Buffer.byteLength(code), sources: files }, null, 2) + '\n');
+console.log('Built dist/strata.trendspider.js · ' + Buffer.byteLength(code) + ' bytes · ' + sha256);

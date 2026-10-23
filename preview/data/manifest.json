@@ -1,0 +1,42 @@
+{
+  "cutoff": "2026-10-19",
+  "purpose": "Local UI review fixtures, not current live prices or trading validation",
+  "entries": [
+    {
+      "symbol": "AAPL",
+      "bars": 420,
+      "sha256": "c2406cb51f42d1d66011716c183e7020781a7a7a741b3274a2720ded78e98122",
+      "originalCacheSHA256": "a9bb4549c3fdd27ab14c6da9fb32fb50d099a9596b14cc1c01f6fc221ff664f4"
+    },
+    {
+      "symbol": "CVX",
+      "bars": 420,
+      "sha256": "50df93a4407c09d431e1ec696ec3dfa99408366bd99f6bbf6a8eb92ae3218576",
+      "originalCacheSHA256": "f4f9f7e632894e20c40fd248ceda455caea6e25f92164dffa0d6ef839facdada"
+    },
+    {
+      "symbol": "NVDA",
+      "bars": 420,
+      "sha256": "e20d894d00f695b3f8bf6b657eb7e285e3f707be091c33fa17c089d4ed40cabf",
+      "originalCacheSHA256": "d8a6e4f849212ed2273ebde9d0c3fd7bdd2814e3c30d08908adb6ee6cc8f05a1"
+    },
+    {
+      "symbol": "NKE",
+      "bars": 420,
+      "sha256": "779e25792ec03eb86f50b8a9a016d388ebe176fb69d875631dcbd7a8c986f08c",
+      "originalCacheSHA256": "e6968dd49f77017519dec2b1bb017c08474acd50ec9078eae29ff4aae256d79b"
+    },
+    {
+      "symbol": "CRM",
+      "bars": 420,
+      "sha256": "680ba048e58f374172e2211fd8c97d85fc3503f0b795255ba49890438dc530dc",
+      "originalCacheSHA256": "2e2bcf6cece8ce43d07e3af641a8c32063ca3fd5138f3a762e50ec956be40897"
+    },
+    {
+      "symbol": "CSCO",
+      "bars": 420,
+      "sha256": "eb24479bc333becd85f64567b1338e889322430f38daf67522fe0da1de92cb2a",
+      "originalCacheSHA256": "fd84d41d0ffc7d019e2d74a082ddd3c38740ed55255d09b11db6c548474bdc27"
+    }
+  ]
+}

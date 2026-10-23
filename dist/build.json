@@ -1,0 +1,10 @@
+{
+  "version": "0.1.0",
+  "sha256": "0dab1a3052c0486ea4420b812893cfb93f7ae2c1bae58417aaa690edb31c1307",
+  "bytes": 12816,
+  "sources": [
+    "src/engine.js",
+    "src/presentation.js",
+    "src/trendspider.js"
+  ]
+}
