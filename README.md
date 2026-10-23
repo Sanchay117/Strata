@@ -2,11 +2,12 @@
 
 A native TrendSpider visual indicator for **Most Beautiful On-Chart Indicator**. Strata compares closing-price distributions over 20, 60 and 120 bars and turns their historical spread into layered price contours.
 
-**Working private prototype. Not published or submitted.** This folder is its own Git repository; other category folders are outside it. No GitHub remote has been created.
+**Working private prototype. Not published or submitted.** This folder is its own Git repository; other category folders are outside it. Repository: [Sanchay117/Strata](https://github.com/Sanchay117/Strata).
 
 ## Read the atlas
 
 - **Terrain:** nine contours mark the 5th, 15th, 25th, 35th, 50th, 65th, 75th, 85th and 95th percentiles of the preceding 60 closes. Central shading identifies the middle of that historical sample. These are sample quantiles, not future probability bands.
+- **Terrain colors:** violet/blue identify lower historical price percentiles, cyan/mint the center, and gold/coral the higher percentiles. The 60-bar median is violet; teal and amber paths distinguish the 20- and 120-bar medians. An on-card key explains the spectrum. Colors express rank within observed prices, not bullish/bearish forecasts.
 - **Teal path:** median of the preceding 20 closes. **Amber path:** median of the preceding 120 closes.
 - **Three profiles:** 32-bin histograms of the preceding 20, 60 and 120 closes, with equal weight per bar. All three have identical price bins and vertical scales; height is the fraction of that sample in a bin.
 - **Solid profile marker:** its median. **Dotted marker:** the preceding bar's close, common to all profiles.

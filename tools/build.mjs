@@ -7,5 +7,5 @@ const code = '/* Strata - Price Memory Atlas | MIT License | #TSBuild26\n * Visu
 await mkdir(new URL('dist/', root), { recursive: true });
 await writeFile(new URL('dist/strata.trendspider.js', root), code);
 const sha256 = createHash('sha256').update(code).digest('hex');
-await writeFile(new URL('dist/build.json', root), JSON.stringify({ version: '0.1.0', sha256, bytes: Buffer.byteLength(code), sources: files }, null, 2) + '\n');
+await writeFile(new URL('dist/build.json', root), JSON.stringify({ version: '0.2.0', sha256, bytes: Buffer.byteLength(code), sources: files }, null, 2) + '\n');
 console.log('Built dist/strata.trendspider.js · ' + Buffer.byteLength(code) + ' bytes · ' + sha256);

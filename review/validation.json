@@ -69,6 +69,6 @@
     "identical axes for all profiles",
     "native responsive chart sizing"
   ],
-  "synthetic7000BarCalculationMs": 62.25,
+  "synthetic7000BarCalculationMs": 28.56,
   "note": "Functional and rendering QA only; runtime is environment-dependent. Not a trading backtest."
 }

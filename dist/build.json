@@ -1,7 +1,7 @@
 {
-  "version": "0.1.0",
-  "sha256": "0dab1a3052c0486ea4420b812893cfb93f7ae2c1bae58417aaa690edb31c1307",
-  "bytes": 12816,
+  "version": "0.2.0",
+  "sha256": "163c799304cffa3f5384aa9dec07d4fb53811b988a44095814d71e52c1c4d968",
+  "bytes": 13827,
   "sources": [
     "src/engine.js",
     "src/presentation.js",

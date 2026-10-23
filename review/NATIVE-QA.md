@@ -22,6 +22,14 @@ For the Strata review, the chart-only Aegis overlay, SMA50, lowest-low anchored 
 
 ## Scope and remaining review
 
+### Color revision v0.2.0
+
+At the user's request, the terrain now uses a violet/blue/cyan/mint/gold/coral spectrum ordered by historical price percentile, with teal/violet/amber profile and median labels for 20/60/120 bars. The atlas includes a color key. More opaque fills and slightly stronger paths improve visibility while keeping the candlesticks visible. The calculation engine is byte-for-byte unchanged. Tests and all six fixture checks passed again.
+
+The revised source compiled and saved privately in TrendSpider with no unsaved changes. Native NKE and CVX retained the exact same reference, medians, overlap, shift and rank recorded above, while displaying the new spectrum. The v0.2 screenshots are `screenshots/native-nke-spectrum-v02.png` and `screenshots/native-cvx-spectrum-v02.png`. The updated local Ink and Paper appearances were visually reviewed. The older screenshots document v0.1 and are retained as such.
+
+The Store publishing wizard was inspected through the intellectual-property declaration. No declaration was checked, no public listing was created and no competition form was filled. User will submit the form; `submission/form-answers.md` contains the exact text and prerequisite publication steps.
+
 The local six-symbol fixture checks cover rising, falling and overlapping distributions; tests also cover flat, missing and short histories. Local Paper rendering and a historical replay to December 16, 2025 were visibly checked. Hiding contours reduced the SVG line count from eleven to the two median paths. Calculation QA is recorded in `validation.json`. Functional and visual checks are separate from trading performance; Strata is not a strategy.
 
 Native light-chart rendering, additional resolutions, Store thumbnail readability and the final public listing should receive a final review before publication. No claims of universal native compatibility, complete competitive uniqueness or prize odds are supported by these checks.

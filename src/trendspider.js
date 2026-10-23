@@ -12,15 +12,15 @@ const strataLevels = [];
 for (let strataQ = 0; strataQ < 9; strataQ += 1) {
   strataLevels.push(paint(strataMasked(strataModel.contours[strataQ], strataShowContours), {
     name: 'Memory contour · ' + Math.round(STRATA_QUANTILES[strataQ] * 100) + '%',
-    color: close.map(() => strataQ === 4 ? strataInk.middle : strataInk.contour),
-    thickness: strataQ === 4 ? 1.7 : 0.65, hideInLegend: true, ignoreWhenScaling: true, editorHidden: true
+    color: close.map(() => strataInk.levels[strataQ] + (strataQ === 4 ? '' : 'b8')),
+    thickness: strataQ === 4 ? 2 : 0.85, hideInLegend: true, ignoreWhenScaling: true, editorHidden: true
   }));
 }
 for (let strataBand = 0; strataBand < 8; strataBand += 1) {
-  fill(strataLevels[strataBand], strataLevels[strataBand + 1], '#4d9ea5',
-    [0.035, 0.07, 0.12, 0.19, 0.19, 0.12, 0.07, 0.035][strataBand], 'Price memory layer ' + strataBand);
+  fill(strataLevels[strataBand], strataLevels[strataBand + 1], STRATA_LAYER_COLORS[strataBand],
+    STRATA_LAYER_OPACITIES[strataBand], 'Strata chromatic band ' + strataBand);
 }
-paint(strataMasked(strataModel.medians[0], strataShowMedians), { name: 'Recent memory · 20 bars', color: close.map(() => strataInk.recent), thickness: 2, ignoreWhenScaling: true, editorHidden: true });
-paint(strataMasked(strataModel.medians[2], strataShowMedians), { name: 'Base memory · 120 bars', color: close.map(() => strataInk.base), thickness: 1.7, ignoreWhenScaling: true, editorHidden: true });
+paint(strataMasked(strataModel.medians[0], strataShowMedians), { name: 'Recent memory · 20 bars', color: close.map(() => strataInk.recent), thickness: 2.5, ignoreWhenScaling: true, editorHidden: true });
+paint(strataMasked(strataModel.medians[2], strataShowMedians), { name: 'Base memory · 120 bars', color: close.map(() => strataInk.base), thickness: 2, ignoreWhenScaling: true, editorHidden: true });
 paint_overlay('Strata atlas', { position: 'bottom_left', order: 'above_all', offset_x: 48, offset_y: -10 },
   buildStrataOverlay(strataModel, { theme: strataTheme, compact: strataCardSize === 'Compact', decimals: current.decimals, symbol: current.ticker, resolution: current.resolution }));

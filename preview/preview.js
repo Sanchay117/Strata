@@ -1,5 +1,5 @@
 import { calculateStrata } from '../src/engine.js';
-import { STRATA_PALETTES, buildStrataOverlay, strataEscape } from '../src/presentation.js';
+import { STRATA_PALETTES, STRATA_LAYER_COLORS, STRATA_LAYER_OPACITIES, buildStrataOverlay, strataEscape } from '../src/presentation.js';
 const byId = id => document.getElementById(id);
 let payload;
 let sourceCode = '';
@@ -54,15 +54,17 @@ function render() {
   }
   if (byId('contours').value === 'Show') {
     for (let level = 0; level < 8; level++) {
-      content.push(`<polygon points="${poly([...path(model.contours[level]), ...path(model.contours[level + 1]).reverse()])}" fill="#4d9ea5" fill-opacity="${[.035,.07,.12,.19,.19,.12,.07,.035][level]}"/>`);
+      content.push(`<polygon points="${poly([...path(model.contours[level]), ...path(model.contours[level + 1]).reverse()])}" fill="${STRATA_LAYER_COLORS[level]}" fill-opacity="${STRATA_LAYER_OPACITIES[level]}"/>`);
     }
-    for (let level = 0; level < 9; level++) content.push(`<polyline points="${poly(path(model.contours[level]))}" fill="none" stroke="${level === 4 ? ink.middle : ink.contour}" stroke-width="${level === 4 ? 1.7 : .65}"/>`);
+    for (let level = 0; level < 9; level++) content.push(`<polyline points="${poly(path(model.contours[level]))}" fill="none" stroke="${ink.levels[level]}" stroke-opacity="${level === 4 ? 1 : .72}" stroke-width="${level === 4 ? 2 : .85}"/>`);
   }
   for (const [index, bar] of shown.entries()) {
     const cx = x(first + index), color = bar.close >= bar.open ? ink.recent : '#c77e80';
     content.push(`<line x1="${cx}" x2="${cx}" y1="${y(bar.high)}" y2="${y(bar.low)}" stroke="${color}" stroke-width=".8"/><rect x="${cx - 1.25}" y="${Math.min(y(bar.open),y(bar.close))}" width="2.5" height="${Math.max(.8,Math.abs(y(bar.open)-y(bar.close)))}" fill="${color}"/>`);
   }
-  for (const [index, color] of [[0, ink.recent], [2, ink.base]]) content.push(`<polyline points="${poly(path(model.medians[index]))}" fill="none" stroke="${color}" stroke-width="${index === 0 ? 2 : 1.7}"/>`);
+  for (const [index, color] of [[0, ink.recent], [2, ink.base]]) content.push(`<polyline points="${poly(path(model.medians[index]))}" fill="none" stroke="${color}" stroke-width="${index === 0 ? 2.5 : 2}"/>`);
+  document.documentElement.style.setProperty('--teal', ink.recent);
+  document.documentElement.style.setProperty('--gold', ink.base);
   for (let tick = 0; tick < 5; tick++) {
     const index = first + Math.round((shown.length - 1) * tick / 4);
     content.push(`<text x="${x(index)}" y="470" fill="${ink.muted}" font-size="10" text-anchor="${tick === 0 ? 'start' : tick === 4 ? 'end' : 'middle'}">${bars[index].date}</text>`);

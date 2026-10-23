@@ -4,7 +4,7 @@
 
 History leaves a shape. Strata reveals it through layered price contours and three aligned closing-price distributions.
 
-The terrain maps the previous 60 closes into historical percentiles. Teal and amber paths track the 20- and 120-bar medians. The atlas compares all three windows on identical price bins and density scales, showing where recent prices have gathered and how that differs from the longer sample.
+The terrain maps the previous 60 closes into historical percentiles: violet and blue for lower prices, cyan and mint for the center, gold and coral for higher prices. Teal, violet and amber identify the 20-, 60- and 120-bar medians. The atlas compares all three windows on identical price bins and density scales, showing where recent prices have gathered and how that differs from the longer sample.
 
 Read it in three steps:
 
